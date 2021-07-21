@@ -1,0 +1,98 @@
+    .main {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+    
+    .hero {
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+    
+    .hero__image {
+        width: 100%;
+    }
+    
+    .article {
+        grid-row: 1/2;
+        padding: 3rem;
+    }
+    
+    .article__title {
+        font-family: $old-standard;
+        font-size: $xx-large;
+        font-weight: $bold;
+        text-transform: uppercase;
+        color: $smoky-black;
+    }
+    
+    .article__text {
+        width: 70%;
+        margin-top: 1rem;
+        font-size: $medium;
+        color: $quick-silver;
+        letter-spacing: 1px;
+    }
+    
+    .article__btn {
+        margin-top: 1rem;
+        font-size: $large;
+        background-color: $white;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        border: 1px solid $smoky-black;
+        transition: border-color 300ms;
+    }
+    
+    .article__btn:hover {
+        border-color: $light-gray;
+    }
+    
+    .article__btn:focus {
+        border-color: $light-gray;
+        color: $light-gray;
+    }
+    
+    @media (min-width:425px) and (max-width:768px) {
+        .main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+        }
+        .hero {
+            width: 100%;
+        }
+        .hero__image {
+            width: 100%;
+            height: 30%;
+        }
+    }
+    
+    @media (max-width:425px) {
+        .main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+        }
+        .article {
+            padding: 2rem;
+        }
+        .article__title {
+            font-size: $x-large;
+        }
+        .article__text {
+            width: 100%;
+            margin-top: 1rem;
+            font-size: $small;
+            letter-spacing: 1.2px;
+            line-height: 1.75;
+        }
+        .article__btn {
+            margin-top: 1rem;
+            font-size: $medium;
+            font-weight: $bold;
+        }
+    }
